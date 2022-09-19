@@ -3,7 +3,6 @@ void setup(){
   frameRate(2);
 }
 
-
 void draw(){
    fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
   rect(0,0,600,600);
@@ -62,6 +61,3 @@ void fish (int x, int y){
   curveVertex(x+30,y-70);
   endShape();
 }
-
-
-
