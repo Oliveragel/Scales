@@ -1,9 +1,6 @@
 void setup(){
   size(600,600);
-  frameRate(1);
- 
- 
- 
+  frameRate(2);
 }
 
 
@@ -13,10 +10,9 @@ void draw(){
    for(int y = -40; y<700; y = y+125){
     for(int x = 0; x<700; x = x+90){
       diamond(x,y);
-      coffin(x,y);
+      fish(x+30,y-50);
     }
   }
- 
   
 }
 void diamond(int x, int y){
@@ -43,17 +39,28 @@ void diamond(int x, int y){
   endShape();
 }
 
-void coffin (int x, int y){
+void fish (int x, int y){
   fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+ //left side
   beginShape();
-  curveVertex(x,y);
-  curveVertex(x,y);
-  curveVertex(x-5, y);
-  curveVertex(x-7, y - 5);
-  curveVertex(x-3, y-20);
-  curveVertex(x,y);
-  curveVertex(x,y);
+  curveVertex(x+30,y);
+  curveVertex(x+30,y);
+  curveVertex(x-30, y-50);
+  curveVertex(x-20, y-20);
+  curveVertex(x-10, y-70);
+  curveVertex(x+30,y-70);
+  curveVertex(x+30,y-70);
   endShape();
-  
+  //right side
+  beginShape();
+  curveVertex(x+30,y);
+  curveVertex(x+30,y);
+  curveVertex(x+30, y-50);
+  curveVertex(x+20, y-20);
+  curveVertex(x+10, y-70);
+  curveVertex(x+30,y-70);
+  curveVertex(x+30,y-70);
+  endShape();
 }
+
 
